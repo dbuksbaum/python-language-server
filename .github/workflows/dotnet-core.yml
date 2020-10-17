@@ -25,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.0
       with:
         # Artifact name
-        name: release-build # optional, default is artifact
+        name: pls-release-build # optional, default is artifact
         # A file, directory or wildcard pattern that describes what to upload
         path: output/bin/Release
         # The desired behavior if no files are found using the provided path.
