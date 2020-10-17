@@ -21,3 +21,11 @@ jobs:
       run: dotnet restore ./src/PLS.sln
     - name: Build
       run: dotnet build --configuration Release --no-restore ./src/PLS.sln
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.0
+      with:
+        # Artifact name
+        name: release-build # optional, default is artifact
+        # A file, directory or wildcard pattern that describes what to upload
+        path: output/bin/Release
+        # The desired behavior if no files are found using the provided path.
